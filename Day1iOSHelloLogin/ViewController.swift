@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         print("viewDidLoad")
-        lbWelcome.text = "Welcome to iOS Programming"
+      //  lbWelcome.text = "Welcome to iOS Programming"
         
         print(lbWelcome.text)
     }
