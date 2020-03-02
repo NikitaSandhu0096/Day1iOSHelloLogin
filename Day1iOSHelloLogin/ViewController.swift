@@ -38,12 +38,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnClickMeTap(_ sender: UIButton) {
-        lbWelcome.text = "Ohh, Don't click again"
+        match.text = "Email and Password are same"
     }
     
     
-    @IBAction func txtEnter(_ sender: UITextField) {
-      
+    @IBAction func txtEnter(_ sender: UITextInput) {
     }
+    
+    @IBAction func enterPassword(_ sender: UITextInput) {
+    }
+    
+    @IBOutlet weak var match: UILabel!
 }
 
