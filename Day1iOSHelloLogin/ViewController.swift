@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var lbWelcome: UILabel!
+    @IBOutlet weak var txtEmail: UITextField!
     
-    override func viewWillAppear(_ animated: Bool) {
+    @IBOutlet weak var txtPassword: UITextField!
+    
+   /* override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
     }
     
@@ -26,28 +28,25 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         print("viewWillDisappear")
-    }
+    } */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewDidLoad")
+      //  print("viewDidLoad")
       //  lbWelcome.text = "Welcome to iOS Programming"
+       // print(lbWelcome.text)
+    }
+    
+    @IBAction func switchSave(_ sender: UISwitch) {
         
-        print(lbWelcome.text)
+        if txtEmail.text == txtPassword.text{
+            UserDefaults.standard.set(txtEmail.text, forKey: "name1")
+            UserDefaults.standard.set(txtPassword.text, forKey: "name2")
+        }
     }
     
-    @IBAction func btnClickMeTap(_ sender: UIButton) {
-        match.text = "Email and Password are same"
+    @IBAction func btnNext(_ sender: UIButton) {
     }
-    
-    
-    @IBAction func txtEnter(_ sender: UITextInput) {
-    }
-    
-    @IBAction func enterPassword(_ sender: UITextInput) {
-    }
-    
-    @IBOutlet weak var match: UILabel!
 }
 
